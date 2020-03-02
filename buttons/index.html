@@ -1,0 +1,73 @@
+<html>
+	<head>
+		<script
+  src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+  integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+  crossorigin="anonymous"></script>
+	</head>
+
+	<body>
+
+		<script>
+			//http://blynk-cloud.com/xpXEjwey3CPxL7mo0m-y4-zKRQQyk8qo
+			$(function(){
+				$("#on1").on('click', function(){
+					let url = "http://blynk-cloud.com/xpXEjwey3CPxL7mo0m-y4-zKRQQyk8qo/update/D5?value=1";
+					fetch(url).then(data => {
+						console.log(data);
+					})
+				});
+
+				$("#off1").on('click', function(){
+					let url = "http://blynk-cloud.com/xpXEjwey3CPxL7mo0m-y4-zKRQQyk8qo/update/D5?value=0";
+					fetch(url).then(data => {
+						console.log(data);
+					});
+				})
+
+
+				$("#on2").on('click', function(){
+					let url = "http://blynk-cloud.com/xpXEjwey3CPxL7mo0m-y4-zKRQQyk8qo/update/D16?value=1";
+					fetch(url).then(data => {
+						console.log(data);
+					})
+				});
+
+				$("#off2").on('click', function(){
+					let url = "http://blynk-cloud.com/xpXEjwey3CPxL7mo0m-y4-zKRQQyk8qo/update/D16?value=0";
+					fetch(url).then(data => {
+						console.log(data);
+					});
+				})
+
+
+				$("#on3").on('click', function(){
+					let url = "http://blynk-cloud.com/xpXEjwey3CPxL7mo0m-y4-zKRQQyk8qo/update/D15?value=1";
+					fetch(url).then(data => {
+						console.log(data);
+					})
+				});
+
+				$("#off3").on('click', function(){
+					let url = "http://blynk-cloud.com/xpXEjwey3CPxL7mo0m-y4-zKRQQyk8qo/update/D15?value=0";
+					fetch(url).then(data => {
+						console.log(data);
+					});
+				})
+
+			})
+		</script>
+		<h1>Light 1</h1>
+		<button type="button" id="on1" name="button-on">ON</button>
+		<button type="button" id="off1" name="button-off">OFF</button>
+
+		<h1>Light 2</h1>
+		<button type="button" id="on2" name="button-on">ON</button>
+		<button type="button" id="off2" name="button-off">OFF</button>
+
+		<h1>Fan</h1>
+		<button type="button" id="on3" name="button-on">ON</button>
+		<button type="button" id="off3" name="button-off">OFF</button>
+
+	</body>
+</html>
